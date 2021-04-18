@@ -21,8 +21,6 @@ function ScrollLoading() {
         
         setstrokeDashoffset(count)
         setScrool(perc);
-        
-        
     };
 
     useEffect(() => {
