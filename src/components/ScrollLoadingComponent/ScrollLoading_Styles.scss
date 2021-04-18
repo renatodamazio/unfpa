@@ -1,0 +1,61 @@
+.wrapper_area {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.fixed_item {
+    position: sticky;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow-y: hidden;
+}
+
+svg circle {
+    // stroke: #36383f;
+    stroke-width: 1px;
+}
+
+svg .progress {
+    stroke-width: 3px;
+    transition: .1s;
+    // stroke: rgb(19, 17, 17);
+}
+
+.container {
+    position: absolute;
+    display: block;
+    margin: auto;
+    overflow: auto;
+    transform: translate(-50%, -50%) scale(1);
+    left: 50%;
+    top: 50%;
+}
+
+.ghost_section {
+    height: 1280px;
+    width: 100%;
+    display: block;
+}
+
+.container:after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: attr(data-scroll);
+    border-radius: 50%;
+    color: #36383f;
+}

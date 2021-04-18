@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    font-family: 'muliregular';
+    font-size: $font-base;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    outline: 1px solid black;
+}
+
+#root {
+    padding-top: 100%;
+}
