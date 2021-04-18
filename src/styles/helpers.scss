@@ -1,0 +1,41 @@
+
+.flex {
+    display: flex;
+}
+
+.title {
+    font-family: 'newzald_testbold';
+}
+
+.w-full {
+    width: 100%;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.text-white {
+    color: #fff;
+    font-size: $font-lg;
+}
+
+.text-transparent {
+    opacity: 0.4;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.justify-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.align-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './ScrollLoading_Styles.scss';
+import './ScrollLoading_styles.scss';
 
-function ScrollLoading() {
+function ScrollLoading({ setbannerIndex, getpercent }) {
     const [scroll, setScrool] = useState(0);
     const [strokeDashoffset, setstrokeDashoffset] = useState(0);
     const strokeDasharray = 933;
@@ -16,9 +16,15 @@ function ScrollLoading() {
         let perc = Math.ceil(top*100/docHeight);
 
         let count = Math.abs(parseInt(strokeDasharray - (perc/100*strokeDasharray)));
+
+        if (perc >= 100) {
+            setbannerIndex(1); 
+            perc = 100;
+        } else {
+            setbannerIndex(0);
+        };
         
-        if (perc > 100) perc = 100;
-        
+        getpercent(perc);
         setstrokeDashoffset(count)
         setScrool(perc);
     };
