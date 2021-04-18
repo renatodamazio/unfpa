@@ -10,7 +10,7 @@ import Section_8 from './components/Section_8';
 function App() {
   return (
    <>
-      <section style={{position: 'fixed', top: '0%'}}><Banner/></section>
+      <Banner/>
       <section><Section_1/></section>
       <section><Section_2/></section>
       <section><Section_3/></section>

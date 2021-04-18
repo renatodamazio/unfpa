@@ -1,3 +1,6 @@
+.section-banner {
+    background: url('../../images/01.jpg') center/cover no-repeat;
+}
 .wrapper_area {
     height: 100%;
     width: 100%;
@@ -39,7 +42,7 @@ svg .progress {
     display: block;
     margin: auto;
     overflow: auto;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
 }
