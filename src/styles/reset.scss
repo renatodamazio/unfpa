@@ -32,3 +32,32 @@ section {
 #root {
     padding-top: 100%;
 }
+
+.arrow {
+    border: solid #fff;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 10px;
+}
+
+.button-next-section {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+}
+
+.line-arrow {
+    content: '';
+    width: 0.1px;
+    height: 60px;
+    background: #fff;
+    position: absolute;
+    transform: rotate(0deg);
+    left: 50%;
+    top: -34px;
+}
+  
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

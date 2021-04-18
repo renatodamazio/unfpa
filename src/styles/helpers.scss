@@ -39,3 +39,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.font-lg {
+    font-size: $font-lg;
+}
+
+.font-xl {
+    font-size: $font-xl;
+}
+
+.font-base {
+    font-size: $font-base;
+}
+
+.text-center {
+    text-align: center;
+}
