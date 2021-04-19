@@ -1,14 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import './Banner_styles.scss';
 import ScrollLoading from '../ScrollLoadingComponent/ScrollLoading';
+import 'particles.js';
+// import particlesJS from 'particles.js';
 import iconJJ from '../../images/a_icon_jnj_white.png';
 import mouse from '../../images/mouse.png';
+
+const particlesJS = window.particlesJS;
 
 function Banner({ setnextStep, nextStep }) {
     const [bannerIndex, setbannerIndex] = useState(0);
     const [zindexBanner1, setzindexBanner1] = useState(1);
     const [zindexBanner2, setzindexBanner2] = useState(0);
     const [parcent, getpercent] = useState(0);
+
+    const particleEffect = () => {
+        particlesJS.load('particles-js', '/assets/particles.json', function() {
+            console.log('callback - particles-js config loaded');
+        });
+    }
+
+    useEffect(() => {
+        particleEffect();
+    }, [])
 
     useEffect(() => {
         setTimeout(() => {
@@ -18,9 +32,9 @@ function Banner({ setnextStep, nextStep }) {
             } else {
                 setzindexBanner1(0);
                 setzindexBanner2(1);
-            }
+            };            
         }, 1000);
-    }, [bannerIndex])
+    }, [bannerIndex]);
 
     return (
         <div className="banners">
@@ -31,13 +45,15 @@ function Banner({ setnextStep, nextStep }) {
 
                             <div className="wrapper_area">
 
+                                <div id="particles-js"></div>
+
                                 <div className="fixed_item">
                                     <h2 className="align-center text-white title">
                                         Every 2 minutes, a woman dies giving birth
 
                                        <div className="mouse-icon">
                                            <span className="w-full"><img src={mouse} width="20" height="30" /></span>
-                                           <p>scroll down</p>
+                                           <p style={{opacity: 0.4}}>scroll down</p>
                                         </div> 
                                     </h2>
 
