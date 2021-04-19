@@ -19,13 +19,14 @@
     text-align: right;
 
     img {
-        max-width: 60%;
+        max-width: 50%;
         object-fit: contain;
     }
 }
 
 #section_3 {
     background: url('../images/05.jpg') center/cover no-repeat;
+    position: relative;
 }
 
 #section_4 {
@@ -78,7 +79,6 @@
         width: 100%;
         height: 100vh;
         max-height: 455px;
-        border: 1px solid #000;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -93,4 +93,9 @@
             background-image: url('../images/10.jpg');
         }
     }
+}
+
+.control-history {
+    font-size: 40px;
+    color: #fff;
 }

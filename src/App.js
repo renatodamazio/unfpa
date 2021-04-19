@@ -32,15 +32,17 @@ function App() {
 
   return (
    <>
-      <Banner nextStep={nextStep} setnextStep={setnextStep}/>
-      <section id="section_1"><Section_1/></section>
-      <section id="section_2"><Section_2/></section>
-      <section id="section_3"><Section_3/></section>
-      <section id="section_4"><Section_4/></section>
-      <section id="section_5"><Section_5/></section>
-      <section id="section_6"><Section_6/></section>
-      <section id="section_7"><Section_7/></section>
-      <section id="section_8"><Section_8/></section>
+      <Banner style={{ zIndex: 99 }} nextStep={nextStep} setnextStep={setnextStep}/>
+      <div style={{ zIndex: -1, position: 'relative', height: '100vh' }}>
+        <section id="section_1"><Section_1/></section>
+        <section id="section_2"><Section_2/></section>
+        <section id="section_3"><Section_3/></section>
+        <section id="section_4"><Section_4/></section>
+        <section id="section_5"><Section_5/></section>
+        <section id="section_6"><Section_6/></section>
+        <section id="section_7"><Section_7/></section>
+        <section id="section_8"><Section_8/></section>
+      </div>
    </>
   );
 }

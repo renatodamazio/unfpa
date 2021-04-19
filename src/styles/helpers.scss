@@ -11,6 +11,10 @@
     width: 100%;
 }
 
+.w-50 {
+    width: 50%;
+}
+
 .items-center {
     align-items: center;
 }
@@ -48,8 +52,24 @@
     font-size: $font-xl;
 }
 
+.font-md {
+    font-size: $font-md;
+}
+
 .font-base {
     font-size: $font-base;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.text-left {
+    text-align: left;
 }
 
 .text-center {

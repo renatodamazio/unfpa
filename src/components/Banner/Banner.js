@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Banner_styles.scss';
 import ScrollLoading from '../ScrollLoadingComponent/ScrollLoading';
 import iconJJ from '../../images/a_icon_jnj_white.png';
+import mouse from '../../images/mouse.png';
 
 function Banner({ setnextStep, nextStep }) {
     const [bannerIndex, setbannerIndex] = useState(0);
@@ -33,6 +34,11 @@ function Banner({ setnextStep, nextStep }) {
                                 <div className="fixed_item">
                                     <h2 className="align-center text-white title">
                                         Every 2 minutes, a woman dies giving birth
+
+                                       <div className="mouse-icon">
+                                           <span className="w-full"><img src={mouse} width="20" height="30" /></span>
+                                           <p>scroll down</p>
+                                        </div> 
                                     </h2>
 
                                     <ScrollLoading getpercent={getpercent} setbannerIndex={setbannerIndex}/>
@@ -49,8 +55,14 @@ function Banner({ setnextStep, nextStep }) {
                 ) : ''
             }
             <section className={`page-view section-banner-2  ${bannerIndex == 0 && !nextStep ? 'hide' : ''}`} style={{top: '0%', zIndex: zindexBanner2 }}>
-               {bannerIndex}
-               <a href="#!" onClick={() => { setnextStep(true) }}>Next</a>
+                <div className="align-center text-lg text-white w-full text-center">    
+                    <h2 className="title">
+                        That’s 830 women every day.
+                    </h2>
+                </div>
+                <div className="button-content">
+                    <a href="#!" className="next-step-button link" onClick={() => { setnextStep(true) }}>Next</a>
+                </div>
             </section>
         </div>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import iconLiberia from '../images/a_icon_liberia.png';
 
-function Section_1(props) {
+function Section_1() {
     return (
         <>
             <div className="text-center">
@@ -11,7 +11,7 @@ function Section_1(props) {
 
                 </div>
             </div>
-            <a className="button-next-section"><span className="line-arrow"></span><i class="arrow down"></i></a>
+            <a className="button-next-section"><span className="line-arrow"></span><i className="arrow down"></i></a>
 
         </>
     );
