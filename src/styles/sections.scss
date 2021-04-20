@@ -397,3 +397,23 @@
         height: 160%;
     }
 }
+
+.inform {
+    font-size: 18px;
+    color: #A4A4A4;
+    text-align: center;
+    padding: 20px 20px 60px;
+    position: relative;
+    margin-bottom: 10px;
+    
+    &:before {
+        content: '';
+        width: 1px;
+        height: 50px;
+        background-color: #A4A4A4;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+}
