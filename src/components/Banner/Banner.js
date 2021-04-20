@@ -7,8 +7,9 @@ import iconJJ from '../../images/a_icon_jnj_white.png';
 import mouse from '../../images/mouse.png';
 
 const particlesJS = window.particlesJS;
+let inc = 0;
 
-function Banner({ setnextStep, nextStep }) {
+function Banner({ nextStep, scrollSection, setnextStep }) {
     const [bannerIndex, setbannerIndex] = useState(0);
     const [zindexBanner1, setzindexBanner1] = useState(1);
     const [zindexBanner2, setzindexBanner2] = useState(0);
@@ -40,7 +41,7 @@ function Banner({ setnextStep, nextStep }) {
         <div className="banners">
            {    
                 !nextStep ? (  
-                    <section className={`page-view section-banner ${bannerIndex == 1 ? 'hide' : ''}`} style={{top: '0%', zIndex: zindexBanner1 }}>
+                    <section className={`page-view section-banner ${bannerIndex == 1 ? 'hide' : ''}`} style={{top: '0%', zIndex: zindexBanner1, opacity: 1, visibility: 'visible' }}>
                         <div className="page-view">
 
                             <div className="wrapper_area">
@@ -70,14 +71,14 @@ function Banner({ setnextStep, nextStep }) {
                     </section>
                 ) : ''
             }
-            <section className={`page-view section-banner-2  ${bannerIndex == 0 && !nextStep ? 'hide' : ''}`} style={{top: '0%', zIndex: zindexBanner2 }}>
+            <section className={`page-view section-banner-2  ${bannerIndex == 0 && !nextStep ? 'hide' : ''}`} style={{top: '0%', zIndex: zindexBanner2, display: 'block', opacity: 1, visibility: 'visible' }}>
                 <div className="align-center text-lg text-white w-full text-center">    
                     <h2 className="title">
                         That’s 830 women every day.
                     </h2>
                 </div>
                 <div className="button-content">
-                    <a href="#!" className="next-step-button link" onClick={() => { setnextStep(true) }}>Next</a>
+                    <a href="#!" className="next-step-button link" onClick={() => { inc++; scrollSection(); setnextStep(inc); }}>Next</a>
                 </div>
             </section>
         </div>

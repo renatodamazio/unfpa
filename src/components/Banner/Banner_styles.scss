@@ -6,8 +6,9 @@ $mask2: '../../images/transition-2.png';
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
+    z-index: 99999;
     background: url($mask) no-repeat -9999px -9999px #000;
 	background-size: 0;
 
@@ -80,6 +81,7 @@ $mask2: '../../images/transition-2.png';
         z-index: 99;
         font-family: 'newzald_testmedium';
         text-align: center;
+        transition: .700s cubic-bezier(0.75, 0.82, 0.75, 1);
     }
 
     .page-view.section-banner {    
@@ -102,6 +104,11 @@ $mask2: '../../images/transition-2.png';
             mask-size: 7100% 100%;
             -webkit-animation: mask-play 1.4s steps(70) forwards;
             animation: mask-play 1.4s steps(70) forwards;
+
+            .title {
+                opacity: 0;
+                transform: scale(0.9);
+            }
         }
     }
 }
@@ -143,11 +150,9 @@ $mask2: '../../images/transition-2.png';
     from {
       -webkit-mask-position: 0% 0;
       mask-position: 0% 0;
-      background-size: 110%;
     }
     to {
       -webkit-mask-position: 100% 0;
       mask-position: 100% 0;
-      background-size: 125%;
     }
   }

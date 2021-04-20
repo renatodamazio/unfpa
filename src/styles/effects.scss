@@ -1,0 +1,19 @@
+.fx {
+    opacity: 0;
+    transition: .700s cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    transform: translateY(-16px);
+    animation-delay: 122s;
+
+    &.animate {
+        opacity: 1;
+        transform: translateY(0px);
+        visibility: visible;
+    }
+
+    &.reveal-text {
+        transform: translate(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+

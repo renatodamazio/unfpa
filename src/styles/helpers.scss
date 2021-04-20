@@ -4,7 +4,8 @@
 }
 
 .title {
-    font-family: 'newzald_testbold';
+    font-family: 'newzald_testmedium';
+    font-weight: normal;
 }
 
 .w-full {
@@ -74,4 +75,8 @@
 
 .text-center {
     text-align: center;
+}
+
+.destak {
+    color: $tertiary;
 }

@@ -1,13 +1,12 @@
 import React from 'react';
 import iconLiberia from '../images/a_icon_liberia.png';
-
-function Section_1() {
+function Section_1({ progress }) {
     return (
         <>
             <div className="text-center">
-                <div className="align-center text-white text-center">
-                    <img src={iconLiberia} style={{display: 'inline-block'}}/>
-                    <h2 className="title font-xl">Libéria</h2>
+                <div className={`align-center text-white text-center`}>
+                    <img src={iconLiberia} className={`fx ${progress ? 'animate' : ''}`} style={{display: 'inline-block'}}/>
+                    <h2 className={`fx ${progress ? 'animate' : ''} title font-xl fx`}>Libéria</h2>
 
                 </div>
             </div>

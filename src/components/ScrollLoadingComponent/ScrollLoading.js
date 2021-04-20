@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ScrollLoading_styles.scss';
+import './ScrollLoading_Styles.scss';
 
 function ScrollLoading({ setbannerIndex, getpercent }) {
     const [scroll, setScrool] = useState(0);
@@ -49,12 +49,8 @@ function ScrollLoading({ setbannerIndex, getpercent }) {
                         strokeDasharray={4} />   
                     <defs>
                     <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="5%" stopColor="#01E400"></stop>
-                        <stop offset="25%" stopColor="#FEFF01"></stop>
-                        <stop offset="40%" stopColor="#FF7E00"></stop>
-                        <stop offset="60%" stopColor="#FB0300"></stop>
-                        <stop offset="80%" stopColor="#9B004A"></stop>
-                        <stop offset="100%" stopColor="#7D0022"></stop>
+                        <stop offset="5%" stopColor="#81F75D"></stop>
+                        <stop offset="100%" stopColor="#FFDC26"></stop>
                     </linearGradient>
                     </defs>
                     <circle 
